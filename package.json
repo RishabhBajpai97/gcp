@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "rm -rf ./build && NODE_ENV=production next build",
+    "start": "next start -p 8080",
+    "gcp-build": "npm run build",
+    "deploy": "gcloud config set project erevnawebsite && gcloud app deploy app.yaml --version=0-1-0",
     "lint": "next lint"
   },
   "dependencies": {

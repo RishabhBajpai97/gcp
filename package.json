@@ -6,11 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p 8080",
+    "deploy": "npm build && gcloud app deploy --project gcp-deploy",
     "lint": "next lint"
   },
   "dependencies": {
     "next": "13.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.18.6"
   }
 }
